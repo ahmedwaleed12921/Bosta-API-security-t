@@ -1,0 +1,75 @@
+{
+  "info": {
+    "_postman_id": "3e21fe1c-2882-4ed9-92d9-bfd0d98d9f74",
+    "name": "UpdateBank",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53037316",
+    "_collection_link": "https://go.postman.co/collection/53037316-3e21fe1c-2882-4ed9-92d9-bfd0d98d9f74?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Generate Token",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "https://stg-app.bosta.co/api/v2/users/generate-token-for-interview-task",
+          "protocol": "https",
+          "host": [
+            "stg-app",
+            "bosta",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "users",
+            "generate-token-for-interview-task"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Bank Info",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bankInfo\": {\n    \"beneficiaryName\": \"Test User\",\n    \"bankName\": \"National Bank of Egypt\",\n    \"accountNumber\": \"123456789012\",\n    \"ibanNumber\": \"EG123456789012345678901234567\"\n  },\n  \"paymentInfoOtp\": 123\n}"
+        },
+        "url": {
+          "raw": "https://stg-app.bosta.co/api/v2/businesses/add-bank-info",
+          "protocol": "https",
+          "host": [
+            "stg-app",
+            "bosta",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "businesses",
+            "add-bank-info"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
