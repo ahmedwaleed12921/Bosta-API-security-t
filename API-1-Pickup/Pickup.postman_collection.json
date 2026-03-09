@@ -1,0 +1,46 @@
+{
+  "info": {
+    "_postman_id": "93f57709-47bd-43fe-b0f3-42b5960460e8",
+    "name": "Pickup",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53037316",
+    "_collection_link": "https://go.postman.co/collection/53037316-93f57709-47bd-43fe-b0f3-42b5960460e8?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create Pickup",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"businessLocationId\": \"MFqXsoFhxO\",\n  \"contactPerson\": {\n    \"_id\": \"sCFBrHGi\",\n    \"name\": \"test name\",\n    \"email\": \"amira.mosa+991@bosta.co\",\n    \"phone\": \"+201055592829\"\n  },\n  \"scheduledDate\": \"2025-06-30\",\n  \"numberOfParcels\": \"3\",\n  \"hasBigItems\": false,\n  \"repeatedData\": {\n    \"repeatedType\": \"One Time\"\n  },\n  \"creationSrc\": \"Web\"\n}"
+        },
+        "url": {
+          "raw": "https://stg-app.bosta.co/api/v2/pickups",
+          "protocol": "https",
+          "host": [
+            "stg-app",
+            "bosta",
+            "co"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "pickups"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
